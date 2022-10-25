@@ -8,13 +8,11 @@ body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
+  /* //font-family: 'Ubuntu', sans-serif; */
   font-weight: 500;
   font-style: normal;
 }
-
-.home {
-  /* background-image: url(../public/assets/home_bg_square.png);
-  background-repeat: no-repeat;
-  background-position: right; */
-}
+/* 
+.homeBox {
+  
+} */

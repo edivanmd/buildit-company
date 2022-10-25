@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import BoxTextImg from '../components/BoxTextImg'
+import infoHome from '../components/data/infoHome'
 
 export default function Home() {
+
   return (
     <div className='home'>
       <Head>
@@ -13,8 +15,8 @@ export default function Home() {
 
       <main>
           <section className='h-screen bg-gradient-to-r from-[#C6DBFF] to-[#E1EBFA]'>
-            <div className='h-screen bg-[url(../public/assets/home_bg_square.png)] bg-no-repeat bg-right-top'>
-              <BoxTextImg />
+            <div className='homeBox h-screen bg-[url(../public/assets/home_bg_square.png)] bg-no-repeat bg-right-top flex align-middle'>
+              <BoxTextImg info={infoHome} />
             </div>               
           </section>
           
