@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import BoxTextImg from '../components/BoxTextImg'
+import Card from '../components/Card'
 import infoHome from '../components/data/infoHome'
+import iconPen from '../public/assets/icons/Icon-pen.png'
+import iconTag from '../public/assets/icons/Icon-tag.png'
+import iconNews from '../public/assets/icons/Icon-news.png'
 
 export default function Home() {
 
@@ -15,14 +19,20 @@ export default function Home() {
 
       <main>
           <section className='h-screen bg-gradient-to-r from-[#C6DBFF] to-[#E1EBFA]'>
-            <div className='homeBox h-screen bg-[url(../public/assets/home_bg_square.png)] bg-no-repeat bg-right-top flex align-middle'>
+            <div className='px-5 homeBox max-h-[890px] h-screen bg-[url(../public/assets/home_bg_square.png)] bg-no-repeat bg-right-top flex align-middle'>
               <BoxTextImg info={infoHome} />
             </div>               
           </section>
           
-          <section className=''>
-            Home2
+          <section className='bg-[#F4F7FF] py-28 px-5'>
+            <h2 className='text-5xl font-bold font-title text-green-2 text-center mb-24'>Innovative Execution</h2>
+            <ul className='max-w-[1240px] flex justify-center flex-col gap-10 md:flex-row m-auto'>
+              <li className='flex justify-center text-center'><Card title={'Featured Listing'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'} image={iconPen} /></li>
+              <li className='flex justify-center text-center'><Card title={'Available Properties'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'} image={iconTag} /></li>
+              <li className='flex justify-center text-center'><Card title={'In the news'} description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'} image={iconNews} /></li>
+            </ul>
           </section>
+
       </main>
 
       <footer>

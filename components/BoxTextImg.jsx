@@ -7,10 +7,10 @@ const BoxTextImg = ({ info }) => {
     <>
     {info.map((list, index) => (
       <div key={index} className='max-w-[1240px] m-auto my-auto flex justify-center items-center'>
-          <div>
+          <div className='max-[970px]:text-center'>
             <h2 className='text-5xl font-bold font-title text-green-2'>{list.title}</h2>
             <p className='text-xl text-green-1 my-6'>{list.description}</p>
-            <ul className='flex gap-2 mt-5'>
+            <ul className='flex flex-wrap gap-2 mt-5 max-[970px]:justify-center'>
               {list.links.map((link, index) => (
                 <li key={index} className='mt-4'>
                     <Link href={link.path}>
@@ -20,7 +20,7 @@ const BoxTextImg = ({ info }) => {
                 ))}
             </ul>
           </div>
-          <div>
+          <div className='max-[970px]:hidden'>
             <ul className='flex flex-wrap gap-2 justify-end'>
               {list.images.map((image, index) => (
                 <li key={index} className={list.images.length == 5 && '[&:nth-child(1)]:self-end [&:nth-child(3)]:self-end'}>
